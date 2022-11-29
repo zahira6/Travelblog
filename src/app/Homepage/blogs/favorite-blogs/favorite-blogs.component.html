@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="favorite-blogs.component.scss" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <p id="Blogs">New Blogs:</p>
+        <div *ngFor="let blog of favoriteBlogs" class="blogs" id="blogs">
+            <span id="owners">{{blog.owner}}</span>
+            <span id="dates">{{ blog.date | date:'dd/MM/yyyy' }}</span>
+            <span id="categories">{{blog.category}}</span>
+            <hr>
+            <span id="titles">{{blog.title}}</span>
+            <span id="descriptions">{{blog.description }}</span>
+            <span id="ratings">{{blog.rating}}</span>
+            <button class="vote-button" id="votes" (click)="voteTheButton(blog.id)">
+                <span class="vote-counter">{{ getVotes(blog.id) }} <i class="glyphicon glyphicon-thumbs-up"></i></span>
+            </button>
+        </div>
+    </body>
+</html>

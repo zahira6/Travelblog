@@ -1,0 +1,161 @@
+$fontsize: calc(10px + 0.5vw);
+
+#blogs{
+    position: relative;
+    margin: {
+        left: 22%;
+        top: 5%;
+    };
+    padding: {
+        bottom: 20%
+    };
+    border: solid black thin;
+    width: calc(220px + 30vw);
+    min-height: auto;
+    font-size: $fontsize;
+    background-color: rgb(174, 218, 207);
+    overflow: auto;
+}
+
+hr{
+    margin: {
+        top: 10%
+    };
+    border-color: black;
+    width: calc(180px + 30vw);
+}
+
+#titles{
+    position: absolute;
+    margin: {
+        left: 5%;
+        bottom: 10%;
+        top: 3%
+    };
+    line-height: 200%;
+    font-weight: bold;
+}
+
+#descriptions{
+    position: absolute;
+    margin: {
+        top: 15%;
+        left: 5%;
+        bottom: 5%;
+        right: 5%
+    };
+    line-height: 200%;
+    overflow: auto;
+}
+
+#owners{
+    position: absolute;
+    margin: {
+        top: 3%;
+        left: 5%;
+    };
+    line-height: 200%;
+}
+
+#dates{
+    position: absolute;
+    margin: {
+        top: 3%;
+        left: 80%;
+    };
+}
+
+#categories{
+    position: absolute;
+    margin: {
+        top: 3%;
+        left: 45%
+    };
+}
+
+#ratings{
+    float: right;
+    position: absolute;
+    margin: {
+        top: 3%;
+        left: 50%;
+    };
+    border: none;
+    background-color: rgba(20,	176, 155, 0);
+}
+
+#votes{
+    float: right;
+    position: absolute;
+    margin: {
+        left: 90%;
+        top: 2%
+    };
+    background-color: rgba(20,	176, 155, 0);
+    border: none;
+}
+
+#Blogs{
+    font-size: calc(14px + 0.5vw);
+    font-weight: bold;
+    margin: {
+        top: 5%;
+        left: 22%
+    };
+}
+
+@media screen and (max-width: 550px){
+    #blogs{
+        width: 72%;
+        margin: {
+            left: 10%
+        };
+        min-height: 300px;
+    }
+
+    #titles{
+        width: 70%;
+        margin: {
+            top: 5%
+        };
+    }
+
+    #descriptions{
+        margin: {
+            top: 20%
+        };
+    }
+
+    #dates{
+        margin: {
+            top: 5%;
+            left: 75%;
+        }
+    }
+
+    #ratings{
+        margin: {
+            top: 5%
+        };
+    }
+
+    #votes{
+        margin: {
+            top: 55%;
+            left: 85%
+        };
+    }
+
+    #delete{
+        margin: {
+            top: 50%
+        };
+    }
+
+    #categories{
+        margin: {
+            top: 5%;
+            left: 40%
+        };
+    }
+}

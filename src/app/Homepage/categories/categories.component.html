@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="categories.component.scss" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Categories:</h1>
+        <div id="allCategories">
+            <div *ngFor="let letter of getAllLetters()">
+                <p id="letter">{{letter}}</p>
+                <div *ngFor="let category of enumKeys" id="categories">
+                <div *ngIf="getFirstLetter(category) === letter">{{category}}</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+export enum Categories {
+    Autum = "Autumn",
+    Camping = "Camping",
+    City = "City",
+    Continent = "Continent",
+    Country = "Country",
+    Hiking = "Hiking",  
+    Hotel = "Hotel",
+    Mountains = "Mountains",   
+    Sea = "Sea",
+    Spring = "Spring",
+    Summer = "Summer",
+    Winter = "Winter",
+    Woods = "Woods",
+}

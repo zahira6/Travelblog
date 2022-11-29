@@ -1,0 +1,110 @@
+$fontsize: calc(10px + 0.5vw);
+
+#profile{
+    margin: {
+        top: 10px;
+    };
+}
+
+p{
+    font-size: calc(14px + 0.5vw);
+    margin: {
+        top: 5%;
+        left: 22%;
+    }
+}
+
+.todo, .diary{
+    border: solid  thin;
+    width: calc(200px + 20vw);
+    font-size: $fontsize;
+    padding: {
+        top: 2%;
+        bottom: calc(50px + 1vw)
+    }
+    margin: {
+        bottom: 2%;
+        left: 22%;
+    };
+    background-color: rgba(20,	176, 155, 0.2);
+    overflow: hidden;
+}
+    
+#title{
+    font-weight: bold;
+    float: left;
+    margin: {
+        left: 5%;
+        top: 2%;
+    };
+    width: calc(110px + 12vw);
+    text-align: left;
+    word-wrap: break-word;
+}
+
+#description{
+    margin: {
+        bottom: 2%;
+        right: 20%;
+        top: 5%;
+        left: 5%
+    };
+    float: left;
+    width: calc(80px + 5vw);
+}
+    
+#date{
+    width: calc(50px + 5vw);
+    margin-left: 5%;
+}
+
+#profile a{
+    float: right;
+    padding: {
+        right: 2%
+    };
+    font-size: calc(14px + 0.5vw);
+}
+
+a{
+    color: black;
+}
+
+#profile ul{
+    margin: {
+        top: 2%;
+        right: 15%
+    };
+}
+
+a:hover{
+    color: #14B09B;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 550px){
+    #description{
+        overflow:hidden;
+    }
+        
+    #title{
+        overflow:hidden;
+    }
+
+    .todo, .diary{
+        margin: {
+            left: 15%
+        };
+        width: 70%;
+    }
+
+    #title{
+        width: 55%;
+    }
+
+    p{
+        margin: {
+            left: 15%;
+        }
+    }
+}

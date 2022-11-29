@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+body { 
+  margin: 0; 
+  padding: 0;
+  width: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  background-color: #EBE5D9 !important;
+}
+
+nav{
+  background-color: #14B09B !important;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+

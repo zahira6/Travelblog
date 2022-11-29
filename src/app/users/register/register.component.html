@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="register.component.scss" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Register</h1>
+        <form action="register.component.ts" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+            <div id="form">
+                <div id="labelEmail">
+                <label for="email" id="email">E-Mail:</label>
+                <input type="text" class= "form-control" id="email" formControlName="email" placeholder="E-Mail" [ngClass]="{'is-valid': submitted && f['email'].errors}">
+                </div>
+                <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                    <small *ngIf="f['email'].errors['required']" id="small">E-mail is required!</small>
+                </div>
+
+                <div id="labelPassword">
+                <label for="password" id="password">Password:</label>
+                <input type="text" formControlName="password" id="password" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }">
+                </div>
+                <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                    <small *ngIf="f['password'].errors['required']" id="small">Password is required!</small>
+                </div>
+                
+                <div id="labelConfirm">
+                <label for="passwordConfirm" id="confirm">Confirm password:</label>
+                <input type="text" formControlName="passwordConfirm" id="confirm" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f['passwordConfirm'].errors }">
+                </div>
+                <div *ngIf="submitted && f['passwordConfirm'].errors" class="invalid-feedback">
+                    <small *ngIf="f['passwordConfirm'].errors['required']" id="small">
+                    Confirm Password is required!
+                    </small>
+                    <small *ngIf="f['passwordConfirm'].errors['matching']" id="small">
+                    Passwords don't match!
+                    </small>
+                </div>
+                
+                <div class="form-group" id="buttons">
+                    <button type="submit" class="btn btn-primary" id="register">Register</button>
+                    <button
+                      type="button"
+                      (click)="onReset()"
+                      class="btn btn-warning float-right" id="reset">
+                      Reset
+                    </button>
+                  </div>
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,149 @@
+$fontsize: calc(10px + 0.5vw);
+
+nav{
+    border: {
+        top: solid black;
+        bottom: solid black;
+    }
+    font-size: $fontsize;
+    height: calc(45px + 2vw)
+}
+
+
+#sidebarMenu {
+    position: absolute;
+    width: calc(130px + 3vw);
+    transform: translateY(-100%); 
+    background-color: rgba(20,	176, 155, 0.4);
+    border: solid black thin;
+    line-height: 150%;
+}
+
+.main-content-wrapper a{
+    margin: {
+        left: 3%;
+        bottom: 3%;
+        top: 2%
+    };
+    padding: {
+        top: 15%;
+        bottom: 15%
+    };
+    color: black;
+    text-decoration: none;
+}
+
+mat-expansion-panel-header{
+    margin-top: 10%;
+    padding-left: 10%;
+}
+
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateY(0);
+    top: calc(8% + 0.9vw); 
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+
+.sidebarIconToggle {
+    transition: all 0.3s;
+    cursor: pointer;
+    position: absolute;
+    width: calc(20px + 0.5vw);
+    left:calc(5% + -1%);
+    top: 4%;
+}
+
+.spinner {
+    height: 3px;
+    background-color: black;
+}
+
+.horizontal {
+    transition: all 0.3s;
+    position: relative;
+    margin-top: 3px;
+}
+
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+}
+
+.diagonal.part-2 {
+    transition: all 0.3s;
+    position: relative;
+    margin-top: 3px;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+img{
+    margin: {
+        left: calc(25% + 10vw);
+    };
+    width: calc(130px + 4vw);
+}
+
+#login, #register{
+    float: right;
+    text-decoration: none;
+    margin: {
+        left: 5%;
+        right: 5%
+    }
+    padding: {
+        top: 2%
+    };
+    color: black;
+    line-height: calc(470% + -6vw)
+}
+
+ @media screen and (max-width: 550px) {
+
+    .sidebarIconToggle{
+        display:block
+    }
+
+    img{
+    margin: {
+        left: 25%;
+        top: 1%
+    };
+    width: 30%;
+    }
+
+    #sidebarMenu{
+        width: 35%;
+    }
+
+    .sidebarIconToggle {
+        width: 5%;
+        left:5%;
+        top: 3%;
+    }
+
+    input[type="checkbox"]:checked ~ #sidebarMenu {
+        top: 8.5%
+    }
+    }

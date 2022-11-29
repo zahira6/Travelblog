@@ -1,0 +1,22 @@
+<head>
+    <link href="todo.component.scss" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div>
+    <div class="addItem" id="newTodo">
+        <p>New:</p> <input type="text" [(ngModel)]= "Title" id="todo" placeholder="Todo"> <input type="text" [(ngModel)]= "Description" id="description" placeholder="description"> <input type="date" [(ngModel)]="DueDate" id="date"> 
+        <button (click)="newTodo()" id="button"><span class="glyphicon glyphicon-plus"></span></button>
+    </div>
+    <p id="task">Done Tasks: <input type="checkbox" [(ngModel)]="showDone"></p>
+    <div *ngFor="let todo of todoService.getDoneTodos(showDone ? undefined : false)" class="todo" id="todos" [ngStyle]="{'background-color':(todo.doneDate ? 'rgba(20,	176, 155, 0.8)' : 'rgba(20,	176, 155, 0.2)')}">
+        <input type="checkbox" id="done" [(ngModel)]="todo.doneDate" (click)="todoService.toggleDoneStateById(todo.id)"> 
+        <span id="title">{{todo.title}}</span>
+        <span id="todoDescription">{{todo.description }}</span>
+        <span id="dueDate"><i class="glyphicon glyphicon-dashboard"></i>
+            {{ todo.dueDate | date:'dd/MM/yyyy' }} </span>
+        <button (click)="this.deleteTodo(todo.id)" id="delete"><i class="glyphicon glyphicon-trash"></i></button>
+    </div>
+</div>
+</body>

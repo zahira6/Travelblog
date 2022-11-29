@@ -1,0 +1,185 @@
+$fontsize: calc(10px + 0.5vw);
+
+body{
+    font-size: $fontsize;
+}
+
+#newTodo{
+    margin: {
+        top: 5%;
+        left: 30%
+    };
+    width: calc(200px + 15vw);
+}
+
+#todo{
+    width: 90%;
+    margin-bottom: 1%;
+    border: solid black thin;
+    background-color: rgb(174, 218, 207);
+}
+
+#description{
+    width: 90%;
+    border: solid black thin;
+    background-color: rgb(174, 218, 207);
+    margin-bottom: 1%;
+}
+
+#date{
+    width: 90%;
+    border: solid black thin;
+    background-color: rgb(174, 218, 207);
+}
+
+#button{
+    display: flex;
+    float: right;
+    padding: 2%;
+    margin-top: -8%;
+    border: solid black thin;
+    background-color: rgb(174, 218, 207);
+}
+
+::placeholder{
+    color: black;
+}
+
+#task{
+    margin: {
+        left: 30%
+    };
+}
+
+input[type=checkbox]{
+    transform: scale(1.3);
+    margin: {
+        left: 1%;
+        top: 2%
+    };
+    accent-color: #EBE5D9;
+    border: solid black;
+}
+
+#todos{
+    margin: {
+        left: 25%;
+        top: 2%
+    };
+    border: solid black thin;
+    width: calc(250px + 20vw);
+    height: fit-content;
+    font-size: $fontsize;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+#title, #todoDescription{
+    float: left;
+    margin: {
+        left: 10%;
+        top: 2%;
+    };
+    width: 50%;
+}
+
+element.style{
+    background: none;
+}
+
+#todoDescription{
+    margin: {
+        top: 18%;
+        bottom: 2%;
+        left: -50%;
+        right: 5%
+    };
+}
+
+#dueDate, #delete{
+    line-height: 300%;
+    width: 25%;
+}
+
+#delete{
+    border: none;
+    background-color: rgba(20,	176, 155, 0);
+    margin-top: 5%;
+}
+
+#done{
+    float: left;
+    margin: {
+        top: 10%;
+        left: 5%
+    };
+    accent-color: #EBE5D9;
+    transform: scale(1.4);
+}
+
+@media screen and (max-width: 550px){
+    #newTodo{
+        width: 50%;
+        margin: {
+            left: 25%
+        };
+    }
+
+    #button{
+        margin: {
+            top: -15%;
+            right: -5%;
+        }
+    }
+
+    #task{
+        margin: {
+            left: 25%
+        };
+    }
+
+    input[type=checkbox], #done{
+        transform: scale(1);
+    }
+
+    #todos{
+        width: 70%;
+        margin: {
+            left: 15%
+        };
+        height: fit-content;
+    }
+
+    #title, #todoDescription{
+        width: 50%;
+        margin: {
+            top: 5%;
+            left: 3%;
+            right: 5%
+        };
+    }
+
+    #todoDescription{
+        margin: {
+            top: 10%;
+        }
+    }
+
+    #done{
+        margin: {
+            top: 10%;
+            left: 3%;
+        }
+    }
+
+    #dueDate{
+        line-height: 300%;
+        width: 15%;
+    }
+
+    #delete{
+        margin: {
+            top: 5%
+        };
+    }
+}

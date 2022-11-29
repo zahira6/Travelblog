@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="myblogs.component.scss" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div id="first">
+            <div class="addItem" id="newBlog">
+                <input type="text" [(ngModel)]= "Title" id="blog" placeholder="Title of your Blog"> 
+                <div class="container mt-5" id="categoryDiv">
+                    <div class="row custom-wrapper">
+                        <div class="d-grid">
+                            <form [(ngModel)]="Category" [ngModelOptions]="{standalone: true}" id="category"  ngDefaultControl>
+                                <mat-label>Category *</mat-label>
+                                <select class="custom-select mb-3" matNativeControl required>
+                                    <option *ngFor="let category of enumKeys" [value]="category" id="optionCategory">
+                                        {{category}}
+                                    </option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <textarea type="text" [(ngModel)]= "Description" id="description" placeholder="Type in your content..."></textarea>
+                <div class="container mt-5" id="ratingDiv">
+                    <div class="row custom-wrapper">
+                        <div class="d-grid">
+                            <form [(ngModel)]="Rating" [ngModelOptions]="{standalone: true}" id="rating"  ngDefaultControl>
+                                <mat-label>Rating *</mat-label>
+                                    <select class="custom-select" matNativeControl required>
+                                        <option value="1*">1*</option>
+                                        <option value="2*">2*</option>
+                                        <option value="3*">3*</option>
+                                        <option value="4*">4*</option>
+                                        <option value="5*">5*</option>
+                                    </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <button (click)="newBlog()" id="button"><span class="glyphicon glyphicon-plus"></span></button>
+            </div>
+        </div>
+        <p id="Blogs">Blogs:</p>
+        <div *ngFor="let blog of blogs" class="blogs" id="blogs">
+            <div *ngIf="this.emailUser === blog.owner">
+                <span id="owners">{{blog.owner}}</span> <br/>
+                <span id="titles">{{blog.title}}</span> <br/>
+                <span id="descriptions">{{blog.description }}</span> <br/>
+                <span id="dates">{{ blog.date | date:'dd/MM/yyyy' }}</span> <br/>
+                <span id="categories">{{blog.category}}</span> <br/>
+                <span id="ratings">{{blog.rating}}</span> <br/>
+                <div id="footer">
+                    <span id="votes">{{blog.votes}} <i class="glyphicon glyphicon-thumbs-up"></i></span> <br/>
+                    <button (click)="this.deleteBlog(blog.id)" id="delete"><i class="glyphicon glyphicon-trash"></i></button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

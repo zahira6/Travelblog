@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from './users/auth.service';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Travelblog';
+
+  constructor(private auth : AuthService){}
+
+  loggedIn(): boolean{
+    return this.auth.LoggedIn();
+  }
+
+  ngOnInit() {}
+
 }
+

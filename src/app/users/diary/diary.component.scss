@@ -1,0 +1,101 @@
+$fontsize: calc(10px + 0.5vw);
+
+#newDiary{
+    margin: {
+        top: 5%;
+        left: 22%
+    };
+    width: calc(250px + 33vw);
+    font-size: $fontsize;
+}
+
+#diary{
+    width: 90%;
+    margin-bottom: 1%;
+    border: solid black thin;
+    background-color: rgb(174, 218, 207);
+}
+
+#description{
+    width: 90%;
+    height: 250px;
+    border: solid black thin;
+    background-color: rgb(174, 218, 207);
+}
+
+#button{
+    display: flex;
+    float: right;
+    padding: 2%;
+    margin-top: -5%;
+    border: solid black thin;
+    background-color: rgb(174, 218, 207);
+}
+
+::placeholder{
+    color: black;
+}
+
+#diaries{
+    margin: {
+        left: 22%;
+        top: 5%
+    };
+    border: solid black thin;
+    width: calc(220px + 30vw);
+    height: 250px;
+    font-size: $fontsize;
+    background-color: rgb(174, 218, 207);
+}
+
+#title, #diaryDescription{
+    margin: {
+        left: 5%;
+        bottom: 5%
+    };
+    line-height: 400%;
+}
+
+#date, #delete{
+    float: right;
+    margin: {
+        top: -7%;
+        right: 5%
+    };
+}
+
+#delete{
+    border: none;
+    background-color: rgba(20,	176, 155, 0);
+    margin-right: 8%;
+}
+
+@media screen and (max-width: 550px){
+    #newDiary{
+        width: 80%;
+        margin: {
+            left: 10%
+        };
+    }
+
+    #button{
+        margin: {
+            top: -9%;
+        }
+    }
+
+    #diaries{
+        width: 72%;
+        margin: {
+            left: 10%
+        };
+    }
+
+    #title{
+        width: 70%;
+    }
+
+    #date, #delete{
+        margin-top: -12%;
+    }
+}

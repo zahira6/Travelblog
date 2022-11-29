@@ -1,0 +1,214 @@
+$fontsize: calc(10px + 0.5vw);
+
+#newBlog{
+    margin: {
+        top: 5%;
+        left: 22%
+    };
+    width: calc(250px + 33vw);
+    font-size: $fontsize;
+}
+
+#categoryDiv, #ratingDiv {
+    width: calc(250px + 33vw);;
+}
+
+select{
+    display: flex;
+    background-color: #14B09B;
+    border: solid black thin;
+}
+
+#blog, #rating, #category{
+    width: 90%;
+    margin-bottom: 1%;
+    color: black;
+    border: solid black thin;
+    background-color: rgb(174, 218, 207);
+}
+
+#description{
+    width: 90%;
+    height: 250px;
+    border: solid black thin;
+    background-color: rgb(174, 218, 207);
+}
+
+#button{
+    display: flex;
+    float: right;
+    padding: 2%;
+    margin-top: -40%;
+    border: solid black thin;
+    background-color: rgb(174, 218, 207);
+}
+
+::placeholder{
+    color: black;
+}
+
+#delete{
+    position: absolute;
+    margin: {
+        left: 50%;
+        bottom: 2%;
+    };
+    bottom: 0;
+    background-color: rgb(174, 218, 207);
+    border: none;
+}
+
+#blogs{
+    position: relative;
+    margin: {
+        left: 22%;
+        top: 5%;
+    };
+    padding: {
+        bottom: 20%
+    };
+    border: solid black thin;
+    width: calc(220px + 30vw);
+    min-height: auto;
+    font-size: $fontsize;
+    background-color: rgb(174, 218, 207);
+    overflow: auto;
+}
+
+#titles{
+    position: absolute;
+    margin: {
+        left: 5%;
+        bottom: 10%;
+        top: 10%
+    };
+    line-height: 200%;
+    font-weight: bold;
+}
+
+#descriptions{
+    position: absolute;
+    margin: {
+        top: 15%;
+        left: 5%;
+        bottom: 5%;
+        right: 5%
+    };
+    line-height: 200%;
+    overflow: auto;
+}
+
+#owners{
+    position: absolute;
+    margin: {
+        top: 5%;
+        left: 5%;
+    };
+    line-height: 200%;
+}
+
+#dates{
+    position: absolute;
+    margin: {
+        top: -7%;
+        left: 80%;
+    };
+}
+
+#categories{
+    position: absolute;
+    margin: {
+        top: -10%;
+        left: 45%
+    };
+}
+
+#ratings{
+    float: right;
+    position: absolute;
+    margin: {
+        top: -5%;
+        left: 90%;
+    };
+    border: none;
+    background-color: rgba(20,	176, 155, 0);
+}
+
+#votes{
+    float: right;
+    position: absolute;
+    margin: {
+        left: 90%;
+        bottom: 2%;
+    };
+    bottom: 0;
+}
+
+#footer{
+    margin-top: 90%;
+}
+
+#Blogs{
+    font-size: calc(14px + 0.5vw);
+    font-weight: bold;
+    margin: {
+        top: 5%;
+        left: 22%
+    };
+}
+
+@media screen and (max-width: 550px){
+    #newBlog{
+        width: 80%;
+        margin: {
+            left: 10%
+        };
+    }
+
+    #categoryDiv, #ratingDiv{
+        width: 100%;
+    }
+
+    #button{
+        margin: {
+            top: -115%;
+        }
+    }
+
+    #blogs{
+        width: 72%;
+        margin: {
+            left: 10%
+        };
+    }
+
+    #titles{
+        width: 70%;
+    }
+
+    #dates{
+        margin: {
+            top: -12%;
+            left: 75%;
+        }
+    }
+
+    #votes{
+        margin: {
+            top: 55%
+        };
+    }
+
+    #delete{
+        margin: {
+            top: 50%
+        };
+    }
+
+    #categories{
+        margin: {
+            top: -20%;
+            left: 40%
+        };
+    }
+}

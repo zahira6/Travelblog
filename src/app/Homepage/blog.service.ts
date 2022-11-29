@@ -1,9 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Blog } from '../model/blog';
 import { MyblogsService } from '../users/myblogs.service';
-import { BlogsComponent } from './blogs/all-blogs/blogs.component';
 
 const AUTH_API = 'http://localhost:8080/homepage/blogs';
 

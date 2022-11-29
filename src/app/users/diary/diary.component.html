@@ -1,19 +1,22 @@
-<head>
-    <link href="diary.component.scss" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-<div>
-    <div class="addItem" id="newDiary">
-        <input type="text" [(ngModel)]= "Title" id="diary" placeholder="Title of your entry"> <textarea type="text" [(ngModel)]= "Description" id="description" placeholder="Type in your memories..."></textarea>
-        <button (click)="newDiary()" id="button"><span class="glyphicon glyphicon-plus"></span></button>
-    </div>
-    <div *ngFor="let diary of diaries" class="diary" id="diaries">
-        <span id="title">{{diary.title}}</span> <br/>
-        <span id="diaryDescription">{{diary.description }}</span>
-        <span id="date">
-            {{ diary.date | date:'dd/MM/yyyy' }} </span> <br/>
-        <button (click)="this.deleteDiary(diary.id)" id="delete"><i class="glyphicon glyphicon-trash"></i></button>
-    </div>
-</div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="diary.component.scss" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div>
+            <div class="addItem" id="newDiary">
+                <input type="text" [(ngModel)]= "Title" id="diary" placeholder="Title of your entry"> <textarea type="text" [(ngModel)]= "Description" id="description" placeholder="Type in your memories..."></textarea>
+                <button (click)="newDiary()" id="button"><span class="glyphicon glyphicon-plus"></span></button>
+            </div>
+            <div *ngFor="let diary of diaries" class="diary" id="diaries">
+                <span id="title">{{diary.title}}</span> <br/>
+                <span id="diaryDescription">{{diary.description }}</span>
+                <span id="date"> {{ diary.date | date:'dd/MM/yyyy' }} </span> <br/>
+                <button (click)="this.deleteDiary(diary.id)" id="delete"><i class="glyphicon glyphicon-trash"></i></button>
+            </div>
+        </div>
+    </body>
+</html>

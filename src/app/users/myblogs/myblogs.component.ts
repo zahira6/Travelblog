@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MyblogsService } from '../myblogs.service';
-import { BlogService } from 'src/app/Homepage/blog.service';
 import { Categories } from 'src/app/model/categories';
 import { FormControl } from '@angular/forms';
 import { AuthService } from '../auth.service';

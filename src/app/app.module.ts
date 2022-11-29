@@ -13,7 +13,7 @@ import { CategoriesComponent } from './Homepage/categories/categories.component'
 import { StatisticsComponent } from './Homepage/statistics/statistics.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './model/auth-interceptor';
 import { AuthService } from './users/auth.service';
 import { DiaryComponent } from './users/diary/diary.component';

@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link href="profile.component.scss" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-<div id="profile">
-    <ul>
-    <a href="user/profile#diaries">Diary</a>
-    <a>|</a>
-    <a href="user/profile#todos">Todos</a>
-    </ul>
-<div>
-    <p id="todos">Todos:</p>
-    <div *ngFor="let todo of todoService.getDoneTodos(showDone ? undefined : false)" class="todo">
-        <span id="title">{{todo.title}}</span>
-        <span id="description">{{todo.description }}</span>
-        <span id="date"><i class="glyphicon glyphicon-dashboard"></i>
-            {{ todo.dueDate | date:'dd/MM/yyyy' }} </span>
-    </div>
-</div>
-<div>
-    <p id="diaries">Diary:</p>
-    <div *ngFor="let diary of diaries" class="diary">
-        <span id="title">{{diary.title}}</span>
-        <span id="description">{{diary.description }}</span>
-        <span id="date">
-            {{ diary.date | date:'dd/MM/yyyy' }} </span>
-    </div>
-</div>
-</div>
-</body>
+    <head>
+        <link href="profile.component.scss" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div id="profile">
+            <ul>
+                <a href="user/profile#diaries">Diary</a>
+                <a>|</a>
+                <a href="user/profile#todos">Todos</a>
+            </ul>
+            <div>
+                <p id="todos">Todos:</p>
+                <div *ngFor="let todo of todoService.getDoneTodos(showDone ? undefined : false)" class="todo">
+                    <span id="title">{{todo.title}}</span>
+                    <span id="description">{{todo.description }}</span>
+                    <span id="date"><i class="glyphicon glyphicon-dashboard"></i>{{ todo.dueDate | date:'dd/MM/yyyy' }} </span>
+                </div>
+            </div>
+            <div>
+                <p id="diaries">Diary:</p>
+                <div *ngFor="let diary of diaries" class="diary">
+                    <span id="title">{{diary.title}}</span>
+                    <span id="description">{{diary.description }}</span>
+                    <span id="date"> {{ diary.date | date:'dd/MM/yyyy' }} </span>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

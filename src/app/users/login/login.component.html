@@ -2,6 +2,7 @@
 <html>
     <head>
         <link href="login.component.scss" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <h1>
@@ -10,16 +11,16 @@
         <form action="login.component.ts" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div id="form">
                 <div id="labelEmail">
-                <label for="email" id="email">E-Mail:</label>
-                <input type="text" class= "form-control" id="email" formControlName="email" placeholder="E-Mail" [ngClass]="{'is-valid': submitted && f['email'].errors}">
+                    <label for="email" id="email">E-Mail:</label>
+                    <input type="text" class= "form-control" id="email" formControlName="email" placeholder="E-Mail" [ngClass]="{'is-valid': submitted && f['email'].errors}">
                 </div>
                 <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
                     <small *ngIf="f['email'].errors['required']" id="small">E-mail is required!</small>
                 </div>
 
                 <div id="labelPassword">
-                <label for="password" id="password">Password:</label>
-                <input type="text" id="password" formControlName="password" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }">
+                    <label for="password" id="password">Password:</label>
+                    <input type="text" id="password" formControlName="password" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }">
                 </div>
                 <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
                     <small *ngIf="f['password'].errors['required']" id="small">Password is required!</small>
@@ -27,14 +28,11 @@
                 
                 <div class="form-group" id="buttons">
                     <button type="submit" class="btn btn-primary" id="login">Login</button>
-                    <button
-                      type="button"
-                      (click)="onReset()"
-                      class="btn btn-warning float-right" id="reset">
+                    <button type="button" (click)="onReset()" class="btn btn-warning float-right" id="reset">
                       Reset
                     </button>
                 </div>
-                </div>
+            </div>
         </form>
     </body>
 </html>

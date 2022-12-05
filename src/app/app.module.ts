@@ -7,7 +7,6 @@ import { RegisterComponent } from './users/register/register.component';
 import { LoginComponent } from './users/login/login.component';
 import { ProfileComponent } from './users/profile/profile.component';
 import { BlogsComponent } from './Homepage/blogs/all-blogs/blogs.component';
-import { DetailsComponent } from './Homepage/details/details.component';
 import { LogoutComponent } from './users/logout/logout.component';
 import { CategoriesComponent } from './Homepage/categories/categories.component';
 import { StatisticsComponent } from './Homepage/statistics/statistics.component';
@@ -34,7 +33,6 @@ import { FavoriteBlogsComponent } from './Homepage/blogs/favorite-blogs/favorite
     LoginComponent,
     ProfileComponent,
     BlogsComponent,
-    DetailsComponent,
     LogoutComponent,
     CategoriesComponent,
     StatisticsComponent,

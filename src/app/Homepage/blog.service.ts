@@ -11,17 +11,15 @@ const AUTH_API = 'http://localhost:8080/homepage/blogs';
 export class BlogService {
   blogs = this.myblogsService.blogs;
   headers = new HttpHeaders().set('Content-Type', 'application/json');
-  id = ''
+  public id = '';
 
   constructor(private http: HttpClient, private router: Router, public myblogsService: MyblogsService) { }
 
-  getBlogId(): string{
+  getBlogId(): string {
     this.blogs.forEach(blog => {
-      const id = blog.id
-      return id
+      this.id = blog.id
     });
-    console.log(this.id)
-    return this.id
+      return this.id
   }
 
   getBlogs(){

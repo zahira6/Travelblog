@@ -1,0 +1,26 @@
+$fontsize: calc(10px + 0.5vw);
+
+.chart-container{
+    width: 50%;
+    margin: {
+        left: 25%;
+        top: 5%
+    };
+    font-size: $fontsize;
+}
+
+h1{
+    margin: {
+        left: 25%;
+        top: 5%
+    };
+    font-size: calc(15px + 1vw);
+}
+
+p{
+    margin: {
+        left: 25%;
+        top: 2%
+    };
+    font-size: $fontsize;  
+}

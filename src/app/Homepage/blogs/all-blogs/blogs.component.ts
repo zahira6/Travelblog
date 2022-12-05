@@ -23,8 +23,4 @@ export class BlogsComponent implements OnInit {
     this.blogs[index].votes = votes+1
   }
 
-  public getVotes(id: string): number {
-    const votes = this.blogs[this.blogs.findIndex(t => t.id === id)].votes; 
-    return votes;
-  }
 }

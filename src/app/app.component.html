@@ -42,7 +42,7 @@
                   <a routerLink="homepage/statistics">Most visited</a>
                 </mat-expansion-panel>
 
-                <mat-expansion-panel>
+                <mat-expansion-panel *ngIf="loggedIn()">
                   <mat-expansion-panel-header>
                     <mat-panel-title><a routerLink="user/profile" id="profile">Profile</a></mat-panel-title>
                   </mat-expansion-panel-header>

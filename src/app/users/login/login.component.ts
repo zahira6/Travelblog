@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
     password: new FormControl(''),
   });
   submitted = false;
+  public showPassword: boolean = false;
 
   constructor(
     private authService: AuthService,
@@ -37,6 +38,10 @@ export class LoginComponent implements OnInit {
 
   get f(): { [key: string]: AbstractControl} {
     return this.loginForm.controls;
+  }
+
+  OnClick(): void {
+    this.showPassword = !this.showPassword
   }
 
 

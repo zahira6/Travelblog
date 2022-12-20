@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart, Legend } from 'chart.js/auto';
-import { M } from 'chart.js/dist/chunks/helpers.core';
 import { BlogService } from '../blog.service';
 
 @Component({

@@ -16,6 +16,7 @@ export class RegisterComponent implements OnInit {
     PasswordConfirm: new FormControl('')
   });
   submitted = false;
+  public showPassword: boolean = false;
 
   constructor(
     private authService: AuthService,
@@ -40,6 +41,10 @@ export class RegisterComponent implements OnInit {
 
   get f(): { [key: string]: AbstractControl} {
     return this.registrationForm.controls;
+  }
+
+  OnClick(): void {
+    this.showPassword = !this.showPassword
   }
 
 

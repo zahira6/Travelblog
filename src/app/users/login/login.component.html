@@ -2,6 +2,7 @@
 <html>
     <head>
         <link href="login.component.scss" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
@@ -11,7 +12,7 @@
         <form action="login.component.ts" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div id="form">
                 <div id="labelEmail">
-                    <label for="email" id="email">E-Mail:</label>
+                    <label for="email" id="email">E-Mail:</label> <br/>
                     <input type="text" class= "form-control" id="email" formControlName="email" placeholder="E-Mail" [ngClass]="{'is-valid': submitted && f['email'].errors}">
                 </div>
                 <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
@@ -19,8 +20,12 @@
                 </div>
 
                 <div id="labelPassword">
-                    <label for="password" id="password">Password:</label>
-                    <input type="text" id="password" formControlName="password" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }">
+                    <label for="password" id="password">Password:</label> <br/>
+                    <input type="text"[type]="showPassword ? 'text' : 'password'" id="password" formControlName="password" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }">
+                    <button (click)="OnClick()" id="showPassword">
+                        <i class="fa fa-eye" aria-hidden="true" *ngIf="!showPassword"></i>
+                        <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="showPassword"></i>
+                    </button>  
                 </div>
                 <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
                     <small *ngIf="f['password'].errors['required']" id="small">Password is required!</small>

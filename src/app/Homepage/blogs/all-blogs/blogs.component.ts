@@ -22,5 +22,4 @@ export class BlogsComponent implements OnInit {
     var votes = this.blogs[index].votes
     this.blogs[index].votes = votes+1
   }
-
 }

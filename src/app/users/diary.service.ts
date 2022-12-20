@@ -13,7 +13,6 @@ export class DiaryService {
   headers = new HttpHeaders().set('Content-Type', 'application/json');
   diaries: Diary[] = [];
   tokenKey = 'access_token';
-  filter: 'all' | 'active' | 'done' = 'all';
   
   constructor(private http: HttpClient, private router: Router) { }
 
